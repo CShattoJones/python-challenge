@@ -12,13 +12,12 @@ with open(BudgetData_csv, 'r') as csvfile:
    
     # Loop through the data
     for row in csvreader:
-        print(row)
-           
- 
-# print (len(csvfile))
 # The total number of months included in the dataset
+        months_count = sum(1 for row in csvreader)
+        print(months_count)
 
 # The net total amount of "Profit/Losses" over the entire period
+    
 
 # Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
 
