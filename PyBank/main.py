@@ -10,22 +10,35 @@ with open(BudgetData_csv, 'r', newline='') as csvfile:
 
     # Remove header from the usable data
     header = next(csvreader)
-   
+
+    months = []
+    profits_losses = []  
     # Loop through the data
     for row in csvreader:
 
-        # Assign variables to discrete data and assign profits/losses as float
-        months = row[0]
-        profits_losses = float(row[1]) 
-       
-        # Find total number of months 
-        
+
+        # Find total number of months  
+        months.append(row[0])
 
         # The net total amount of "Profit/Losses" over the entire period
-        net_profits_losses += profits_losses
-        print(net_profits_losses)
+        profits_losses.append(int(row[1]))
+     
 
-    # Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
+    all_months = len(months)
+    print(all_months)
+    
+    # print(profits_losses)
+    net_profits_losses = sum(profits_losses)
+    print(net_profits_losses)
+
+# go to the next element and subtract the previous element from it.
+    for index, value enumerate profits_losses:
+   
+        print(profits_losses)
+
+
+
+   # Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
 
 
 # The greatest increase in profits (date and amount) over the entire period
